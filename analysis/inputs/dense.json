@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "run": "full-17",
+      "method": "Dense",
+      "seed": 17,
+      "n": 2048,
+      "clean_fid": 66.14685865600097,
+      "kid": 0.06986492872238159,
+      "clip_cosine_mean": 0.34476450579677476,
+      "clip_alignment_margin": 0.033213019371032715,
+      "native_caption_retrieval_at_1": 0.0498046875,
+      "PRDC": {
+        "3": {
+          "precision": 0.21337890625,
+          "recall": 0.64697265625,
+          "density": 0.10432942708333333,
+          "coverage": 0.205078125
+        },
+        "5": {
+          "precision": 0.30322265625,
+          "recall": 0.78271484375,
+          "density": 0.11923828125,
+          "coverage": 0.32421875
+        },
+        "10": {
+          "precision": 0.453125,
+          "recall": 0.91015625,
+          "density": 0.141748046875,
+          "coverage": 0.54052734375
+        }
+      },
+      "caption_retrieval": {
+        "R@1": 0.0498046875,
+        "R@5": 0.126953125,
+        "R@10": 0.17578125
+      },
+      "strict_index_retrieval": {
+        "R@1": 0.0498046875,
+        "R@5": 0.12646484375,
+        "R@10": 0.17578125
+      },
+      "maximum_trainable_parameters": 259178304,
+      "phase_trainable_parameters": {
+        "b": 112623564,
+        "c": 259178304,
+        "finetune": 109745408
+      },
+      "peak_allocated_cuda_gib": 5.373178958892822,
+      "phase_peak_allocated_cuda_gib": {
+        "b": 3.446465015411377,
+        "features": 1.270026683807373,
+        "c": 5.373178958892822,
+        "generated": 3.91294527053833,
+        "finetune": 3.707273006439209,
+        "generate": 4.295350551605225,
+        "quality": 0.654841423034668
+      },
+      "best_validation_losses": {
+        "b": 1.3092326074838638,
+        "c": 0.31653611561705475,
+        "finetune": 1.8214366051057975
+      },
+      "phase_steps": {
+        "b": 20000,
+        "c": 10000,
+        "finetune": 14030
+      },
+      "selected_checkpoint_bytes": {
+        "b": 1352105389,
+        "c": 3110391305,
+        "finetune": 1329311101
+      },
+      "source_sha256": {
+        "quality-val-g1.0.json": "45943ef1e0c7d89de22950fcc7233ab234fbc5511ead85b8a49faebd778f7299",
+        "inception-features-val-g1.0.npz": "9d678f8e833cd5d89fe041abcfb00eac506a29d2c59862e68bb2b30c374a9ecb",
+        "clip-embeddings-val-g1.0.npz": "80906617cfc4d3afdcb55d72e58a5aec7d12850bed7871cfd5ac8c1ea24e8a87",
+        "config.json": "4a4475890cfa3ebd5a98ba98ca7d1a80a30556addc53020d7df86a869b06ca3f"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+/code/data/
+/code/models/
+/code/cache/
+/code/runs/
+/code/.*.lock
+/figures-rebuilt/
+*.log

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+<title id="title">Efficient cascaded masked image modeling: MTP resource evaluation</title>
+<desc id="description">Text conditions feature diffusion C and masked-token B, followed by frozen VQ decoding. The grown generator has33.31 million learned parameters and1.63 GiB peak generation allocation, versus368.92 million and4.30GiB for dense. One training seed and unequal budgets.</desc>
+<rect x="1" y="1" width="1198" height="478" rx="12" fill="#ffffff" stroke="#d4dae1"/>
+<path d="M30 35H1170" stroke="#28618c" stroke-width="4"/>
+<text x="42" y="81" font-family="Georgia,DejaVu Serif,serif" font-size="31" font-weight="bold" fill="#202124">Efficient Cascaded Masked Image Modeling</text>
+<text x="42" y="115" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#575b60">Master's thesis project · resource efficiency in text-to-image generation</text>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#737d89"/></marker></defs>
+<g font-family="DejaVu Sans,sans-serif" text-anchor="middle" fill="#202124">
+<rect x="42" y="157" width="155" height="86" rx="6" fill="#f4f6f8" stroke="#c4cbd3"/><text x="119.5" y="190" font-size="17">Caption</text><text x="119.5" y="218" font-size="13" fill="#575b60">frozen text encoder</text>
+<rect x="239" y="157" width="225" height="86" rx="6" fill="#f4f8fc" stroke="#28618c"/><text x="351.5" y="190" font-size="17">Feature diffusion C</text><text x="351.5" y="218" font-size="13" fill="#575b60">text-conditioned · rank 10</text>
+<rect x="507" y="157" width="225" height="86" rx="6" fill="#fcf5f0" stroke="#b66138"/><text x="619.5" y="190" font-size="17">Masked-token B</text><text x="619.5" y="218" font-size="13" fill="#575b60">learned generator · rank 8</text>
+<rect x="774" y="157" width="182" height="86" rx="6" fill="#f4f6f8" stroke="#c4cbd3"/><text x="865" y="190" font-size="17">VQ decoder</text><text x="865" y="218" font-size="13" fill="#575b60">frozen</text>
+<rect x="998" y="157" width="160" height="86" rx="6" fill="#f4f6f8" stroke="#c4cbd3"/><text x="1078" y="190" font-size="17">Image</text><text x="1078" y="218" font-size="13" fill="#575b60">RGB 256</text>
+</g>
+<path d="M119 157V137H619V157" fill="none" stroke="#737d89" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<g stroke="#737d89" stroke-width="1.6" marker-end="url(#arrow)"><path d="M199 200H231"/><path d="M467 200H499"/><path d="M735 200H766"/><path d="M959 200H990"/></g>
+<g font-family="DejaVu Sans,sans-serif">
+<rect x="42" y="281" width="348" height="119" rx="7" fill="#f6f8fb"/>
+<text x="63" y="310" font-size="14" fill="#575b60">LEARNED GENERATOR PARAMETERS</text><text x="63" y="348" font-size="29" fill="#b66138">33.31M</text><text x="222" y="348" font-size="15" fill="#575b60">90.97% fewer</text><text x="63" y="379" font-size="13" fill="#575b60">Dense: 368.92M · selected B + C</text>
+<rect x="426" y="281" width="348" height="119" rx="7" fill="#f6f8fb"/>
+<text x="447" y="310" font-size="14" fill="#575b60">GENERATION PEAK ALLOCATION</text><text x="447" y="348" font-size="29" fill="#b66138">1.63 GiB</text><text x="606" y="348" font-size="15" fill="#575b60">62.08% lower</text><text x="447" y="379" font-size="13" fill="#575b60">Dense: 4.30 GiB · PyTorch allocated</text>
+<rect x="810" y="281" width="348" height="119" rx="7" fill="#f6f8fb"/>
+<text x="831" y="310" font-size="14" fill="#575b60">VALIDATION QUALITY</text><text x="831" y="348" font-size="29" fill="#202124">FID 95.10</text><text x="831" y="379" font-size="13" fill="#575b60">Dense: 66.15 · quality/resource trade-off</text>
+</g>
+<text x="42" y="444" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#575b60">Seed 17 · 2,048 identical validation prompts · unequal training budgets · shared frozen parameters excluded from learned counts</text>
+</svg>

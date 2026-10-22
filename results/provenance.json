@@ -1,0 +1,359 @@
+{
+  "protocol": "curated-mtp-research-release-v1",
+  "created_unix": 1792693785.906652,
+  "source_repository_commit": "28d48795a2bf2c3944fe0127a412909f532d8136",
+  "copied_files": {
+    "code/epoch_sampler.py": {
+      "original_path": "epoch_sampler.py",
+      "sha256": "0f5b3d5e4a2e974d42cb913df054248432429eb0bf30fe15734a1d6c47266f13"
+    },
+    "code/evaluate.py": {
+      "original_path": "evaluate.py",
+      "sha256": "94951fdbf28d016641ac45c8e97ac4eec625fb77ea0fabc68c733b201a81d7fe"
+    },
+    "code/fixed_rank_training.py": {
+      "original_path": "fixed_rank_training.py",
+      "sha256": "3b4b1093de2df86e12dcfc11dd3d0261dcece8d6fec7a9496f9079ba826b4ae4"
+    },
+    "code/generation_recovery.py": {
+      "original_path": "generation_recovery.py",
+      "sha256": "116889c479a0ac1416d0fa773b2b8584cf4ab8efbc968c9f9deabb6fc4a13292"
+    },
+    "code/low_rank.py": {
+      "original_path": "low_rank.py",
+      "sha256": "07e8345fa6629f79e30b824f2a371b208210f5975599408204a78bce9c05ba84"
+    },
+    "code/models.py": {
+      "original_path": "models.py",
+      "sha256": "5de27675dcfbce462c887d9083509f666a8973135f2f7063107b1d0f07d7bc1d"
+    },
+    "code/persistence.py": {
+      "original_path": "persistence.py",
+      "sha256": "4d0cbaf137daf42d12534a855b8c11838a5dfcb5376f311675dd4a28ccb400dd"
+    },
+    "code/prepare.py": {
+      "original_path": "prepare.py",
+      "sha256": "ce4f983e3198bbe31f58d30696042e0b5d529a237c24249ff3f843075369d7d4"
+    },
+    "code/progress_images.py": {
+      "original_path": "progress_images.py",
+      "sha256": "112587c19ae60fef3f3a4bed5159bfa9ead4617e2df26d476ba7c3711e4807d5"
+    },
+    "code/random_streams.py": {
+      "original_path": "random_streams.py",
+      "sha256": "db3ffe7af60ba68f6eebc25905ea00827388976d5ce901855fffed1a3abbd169"
+    },
+    "code/sample_manifest.py": {
+      "original_path": "sample_manifest.py",
+      "sha256": "6b8d57e8266d8a2a0328831bc4b4d1cb0deb77c3a9c1934a3e229d5b65db1293"
+    },
+    "code/shutdown.py": {
+      "original_path": "shutdown.py",
+      "sha256": "e68cc1a99051b98ed034127025c266fe04a8f6fafa8128324e4cd165280ababa"
+    },
+    "code/train.py": {
+      "original_path": "train.py",
+      "sha256": "5bf2f1c12697078d6a411da2ddf409a5997d0d70d447d820dca0ee8494238e1f"
+    },
+    "code/scripts/download_assets.py": {
+      "original_path": "scripts/download_assets.py",
+      "sha256": "c9bbca8794dab234a358402b2ebc5d875305996c64889a89e4e1710f0309dcae",
+      "packaged_sha256": "422c34ac46ed614a61edb306472007ae69a0c91475a4ee2ba1ec28d2c33fffdb",
+      "change": "Pin the recorded evaluation CLIP revision; all training implementation files remain byte-identical."
+    },
+    "code/scripts/train_fixed_rank.py": {
+      "original_path": "scripts/train_fixed_rank.py",
+      "sha256": "bf3655e7e974ea1a45b94ae25a05c874ac41192ed6ab6355b2558306ddd8eceb"
+    },
+    "code/configs/dense.json": {
+      "original_path": "configs/full.json",
+      "sha256": "4a4475890cfa3ebd5a98ba98ca7d1a80a30556addc53020d7df86a869b06ca3f"
+    },
+    "code/configs/grown.json": {
+      "original_path": "runs/converged-gilorat-17/config.json",
+      "sha256": "e73292c5be9df335fc6880364b008ac3d6a39f708f97b31c428e1ec4624eb847"
+    },
+    "code/results/visual_history/full-17-seeds.json": {
+      "original_path": "results/visual_history/full-17-seeds.json",
+      "sha256": "ba747b680d1466cd4bb5d56c62c59db23f645e05093a13023b63d1573cb49e8c"
+    },
+    "code/results/assets.json": {
+      "original_path": "results/assets.json",
+      "sha256": "14a6ebe44ac0f8e7d5f3d618009767b9e76e4c505efe9a478c58cf53ffa82238"
+    },
+    "code/results/inception-asset.json": {
+      "original_path": "results/inception-asset.json",
+      "sha256": "f3eac6220bc5a4aafa41cf1bcd7951efe4e409bb7cc553b0db38879d35e1ec46"
+    },
+    "evidence/dense-17/config.json": {
+      "original_path": "analysis_inputs/full-17/config.json",
+      "sha256": "4a4475890cfa3ebd5a98ba98ca7d1a80a30556addc53020d7df86a869b06ca3f"
+    },
+    "evidence/dense-17/events.jsonl": {
+      "original_path": "analysis_inputs/full-17/events.jsonl",
+      "sha256": "e530fa3921133c70d4ece385026bd9eae1517ba0dbfe6b53c2b3133ec6222702"
+    },
+    "evidence/dense-17/generate-summary.json": {
+      "original_path": "analysis_inputs/full-17/generate-summary.json",
+      "sha256": "a49f4b9eeec79e82ccf3564d2a786c33b96c260a1289937a8d592b740e11f4b9"
+    },
+    "evidence/dense-17/quality-summary.json": {
+      "original_path": "analysis_inputs/full-17/quality-summary.json",
+      "sha256": "629bf24668f60ace7883293dee3a2f96f699d3fd2478412d82783f837e7f8afb"
+    },
+    "evidence/dense-17/quality-val-g1.0.json": {
+      "original_path": "analysis_inputs/full-17/quality-val-g1.0.json",
+      "sha256": "45943ef1e0c7d89de22950fcc7233ab234fbc5511ead85b8a49faebd778f7299"
+    },
+    "evidence/dense-17/inception-features-val-g1.0.npz": {
+      "original_path": "analysis_inputs/full-17/inception-features-val-g1.0.npz",
+      "sha256": "9d678f8e833cd5d89fe041abcfb00eac506a29d2c59862e68bb2b30c374a9ecb"
+    },
+    "evidence/dense-17/clip-embeddings-val-g1.0.npz": {
+      "original_path": "analysis_inputs/full-17/clip-embeddings-val-g1.0.npz",
+      "sha256": "80906617cfc4d3afdcb55d72e58a5aec7d12850bed7871cfd5ac8c1ea24e8a87"
+    },
+    "evidence/dense-17/samples-val-g1.0/prompts.json": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/prompts.json",
+      "sha256": "a4990e4e1af695e84f208d4836d2d0fe1c627725d4971c5f7e17c1160f52ddea"
+    },
+    "evidence/dense-17/b-summary.json": {
+      "original_path": "analysis_inputs/full-17/b-summary.json",
+      "sha256": "4e77d28161e0e74da453f3026c47882389dcaf6d3de64946613572f919583590"
+    },
+    "evidence/dense-17/c-summary.json": {
+      "original_path": "analysis_inputs/full-17/c-summary.json",
+      "sha256": "25504a79e902a57d6508a40fe5ab3f2ef7c998ba1fb35290bbd39e7723bbea34"
+    },
+    "evidence/dense-17/finetune-summary.json": {
+      "original_path": "analysis_inputs/full-17/finetune-summary.json",
+      "sha256": "2e12f2cf8865de2d637b783ffac0576a7f0dbeab5f6d9486872872e69d534990"
+    },
+    "evidence/dense-17/samples-val-g1.0/000000.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000000.png",
+      "sha256": "b58d6798e5caaa5b7a628feb94e9835c89e59efd3634131e046ebfc5a2e521af"
+    },
+    "evidence/dense-17/references-val/000000.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000000.png",
+      "sha256": "a464d3b45373de14b18b41d9a5dbcaadbc46b5f6006c0ded7b1d32c389d6c65b"
+    },
+    "evidence/dense-17/samples-val-g1.0/000025.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000025.png",
+      "sha256": "6c3cb3f680584feb57ac17e4c094f0b5d154ec9d4526ce9bdb20a828501b03fd"
+    },
+    "evidence/dense-17/references-val/000025.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000025.png",
+      "sha256": "8699ef9e14cbc683ead2b376d33c66be023d5cc9aebd4121752aefe4781509ae"
+    },
+    "evidence/dense-17/samples-val-g1.0/000033.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000033.png",
+      "sha256": "c1fa2aaf0cd57eb86dbd989dc1b370bbe8f3988718c406ae74e1384a30700c90"
+    },
+    "evidence/dense-17/references-val/000033.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000033.png",
+      "sha256": "4fda525c5f6ed5078c46479b761271790963fdeda7b813231fadce1f6efa703e"
+    },
+    "evidence/dense-17/samples-val-g1.0/000041.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000041.png",
+      "sha256": "92a5a7b3c084b44a6fd8adbc20b91c37fda5a0ac4a1f8eeb4ecc847ba211dd8b"
+    },
+    "evidence/dense-17/references-val/000041.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000041.png",
+      "sha256": "52478a8aeaa0c846aa4216078484d13756735def70ffb0ae22f171ce0e6bc3e9"
+    },
+    "evidence/dense-17/samples-val-g1.0/000052.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000052.png",
+      "sha256": "6602e8625a87a35fa0e97ecab54f7ab5ea2b13465fbd375d130ddea0cb3af802"
+    },
+    "evidence/dense-17/references-val/000052.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000052.png",
+      "sha256": "c16ac63580440beebcea2123be64ac9211a65c5e21393ae0fe22d0c09f04185a"
+    },
+    "evidence/dense-17/samples-val-g1.0/000071.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000071.png",
+      "sha256": "1293720dba2a84344b44c40a30d79eb619a9f6c50e9f4347cdd5bca5501452ad"
+    },
+    "evidence/dense-17/references-val/000071.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000071.png",
+      "sha256": "9b18bb35785f7e586c4da4e90b47bd5b81a54688907433e866febafb1e1a4d29"
+    },
+    "evidence/dense-17/samples-val-g1.0/000111.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000111.png",
+      "sha256": "e2e438e4af7dcbbbedf5b0f7eb1ce88e1298e95f21dd544226723b1f93a41847"
+    },
+    "evidence/dense-17/references-val/000111.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000111.png",
+      "sha256": "a2cd2eadb24a1f8be037af0a9e33a4bedf07c7741573a9580b90e747ad1ff2a1"
+    },
+    "evidence/dense-17/samples-val-g1.0/000113.png": {
+      "original_path": "analysis_inputs/full-17/samples-val-g1.0/000113.png",
+      "sha256": "31044008374b5ca66b7c8e218d696c33d6bf643e213c8d173d5ec1e437480f44"
+    },
+    "evidence/dense-17/references-val/000113.png": {
+      "original_path": "analysis_inputs/full-17/references-val/000113.png",
+      "sha256": "1b3572987a6d287f290db798354273cc2d2b660966565497b4cc274d6ff35e97"
+    },
+    "evidence/grown-17/config.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/config.json",
+      "sha256": "e73292c5be9df335fc6880364b008ac3d6a39f708f97b31c428e1ec4624eb847"
+    },
+    "evidence/grown-17/events.jsonl": {
+      "original_path": "analysis_inputs/converged-gilorat-17/events.jsonl",
+      "sha256": "4d73d79a35886cf9c3f713fb79accfe74baeab42603445b7520f0fee6fbf1ad3"
+    },
+    "evidence/grown-17/generate-summary.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/generate-summary.json",
+      "sha256": "e7dd757ab2e84c638b8b1f48b06ac7f6414fcc0b70e5aad4f17f33ee9cfcf80b"
+    },
+    "evidence/grown-17/quality-summary.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/quality-summary.json",
+      "sha256": "f24c3fa0ef0ddb83e9c0c6402b856dbb0393083456929e87dc8c19f3b370b2bb"
+    },
+    "evidence/grown-17/quality-val-g1.0.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/quality-val-g1.0.json",
+      "sha256": "ce18444d719e481850d81489099f92776a1875f71b6ebc152ac3ebeb0b18a706"
+    },
+    "evidence/grown-17/inception-features-val-g1.0.npz": {
+      "original_path": "analysis_inputs/converged-gilorat-17/inception-features-val-g1.0.npz",
+      "sha256": "043ac82f1eef4768d92f4afa5c5bdf4348b1e9a636e8a7990bb633a826e2ec41"
+    },
+    "evidence/grown-17/clip-embeddings-val-g1.0.npz": {
+      "original_path": "analysis_inputs/converged-gilorat-17/clip-embeddings-val-g1.0.npz",
+      "sha256": "6869f1f50278dbb5cf7365c4ff088cf12500975e4fff2325c4f4f6d8b734be99"
+    },
+    "evidence/grown-17/samples-val-g1.0/prompts.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/prompts.json",
+      "sha256": "a4990e4e1af695e84f208d4836d2d0fe1c627725d4971c5f7e17c1160f52ddea"
+    },
+    "evidence/grown-17/b-user-phase-end.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/b-user-phase-end.json",
+      "sha256": "106d4ee7a87be2b3c8174e5870bcf2da39a387b37efcf2a08f1c603d4428f010"
+    },
+    "evidence/grown-17/c-user-phase-end.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/c-user-phase-end.json",
+      "sha256": "9eb36823b03c8a5082da6f3ccd9fb7e87209129e381885f3251e61cff51bc4f9"
+    },
+    "evidence/grown-17/finetune-user-phase-end.json": {
+      "original_path": "analysis_inputs/converged-gilorat-17/finetune-user-phase-end.json",
+      "sha256": "9b14a4a7b4da171a392e78af31961626f21aceab22f815e8abe02378b10b99c7"
+    },
+    "evidence/grown-17/samples-val-g1.0/000000.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000000.png",
+      "sha256": "37d540255f93a4164e2e76295dc3b3f6b332e31f72ef3567a2383c9eab3efc50"
+    },
+    "evidence/grown-17/references-val/000000.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000000.png",
+      "sha256": "a464d3b45373de14b18b41d9a5dbcaadbc46b5f6006c0ded7b1d32c389d6c65b"
+    },
+    "evidence/grown-17/samples-val-g1.0/000025.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000025.png",
+      "sha256": "cf9a3ecaea58236a794117f73586bdd96f5108d4b255ce8e6b40251d8148a395"
+    },
+    "evidence/grown-17/references-val/000025.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000025.png",
+      "sha256": "8699ef9e14cbc683ead2b376d33c66be023d5cc9aebd4121752aefe4781509ae"
+    },
+    "evidence/grown-17/samples-val-g1.0/000033.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000033.png",
+      "sha256": "24371e42123eb1986e7eb09c9d2e85f948f8296b0aeb1d65ad182c4522b95622"
+    },
+    "evidence/grown-17/references-val/000033.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000033.png",
+      "sha256": "4fda525c5f6ed5078c46479b761271790963fdeda7b813231fadce1f6efa703e"
+    },
+    "evidence/grown-17/samples-val-g1.0/000041.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000041.png",
+      "sha256": "4368e0dfa87ab7c1ed5dd81825873c34298199aff6df140c86303666b48961c3"
+    },
+    "evidence/grown-17/references-val/000041.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000041.png",
+      "sha256": "52478a8aeaa0c846aa4216078484d13756735def70ffb0ae22f171ce0e6bc3e9"
+    },
+    "evidence/grown-17/samples-val-g1.0/000052.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000052.png",
+      "sha256": "51ba1de6bc1dc10ac90cb831826f6ae58c33ccecec7d0fbe93b0736d826bc127"
+    },
+    "evidence/grown-17/references-val/000052.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000052.png",
+      "sha256": "c16ac63580440beebcea2123be64ac9211a65c5e21393ae0fe22d0c09f04185a"
+    },
+    "evidence/grown-17/samples-val-g1.0/000071.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000071.png",
+      "sha256": "8dc1aa97ef00b268b2ca2a0ba4593a127388a79ae11e67e3b8b15a0c318906a1"
+    },
+    "evidence/grown-17/references-val/000071.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000071.png",
+      "sha256": "9b18bb35785f7e586c4da4e90b47bd5b81a54688907433e866febafb1e1a4d29"
+    },
+    "evidence/grown-17/samples-val-g1.0/000111.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000111.png",
+      "sha256": "ef82f1d08e48c7f79b8edfe6548d9033e4e882321b3fa28117c9bab26b43e734"
+    },
+    "evidence/grown-17/references-val/000111.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000111.png",
+      "sha256": "a2cd2eadb24a1f8be037af0a9e33a4bedf07c7741573a9580b90e747ad1ff2a1"
+    },
+    "evidence/grown-17/samples-val-g1.0/000113.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000113.png",
+      "sha256": "4430838905cff77f7ca4f95e1296863c2e9c0220174aad0fb8ae437b3386e140"
+    },
+    "evidence/grown-17/references-val/000113.png": {
+      "original_path": "analysis_inputs/converged-gilorat-17/references-val/000113.png",
+      "sha256": "1b3572987a6d287f290db798354273cc2d2b660966565497b4cc274d6ff35e97"
+    },
+    "results/comparison.json": {
+      "original_path": "report/dense-vs-grown-v2/data.json",
+      "sha256": "29c075986fc6cfbb1baf8e1f4ceae508c3e3165710d1012ce82b308d4faf446d"
+    },
+    "results/comparison-source-manifest.json": {
+      "original_path": "report/dense-vs-grown-v2/manifest.json",
+      "sha256": "5a57c093c35ffa60f7c88fe08ffe9491f33f2d289ba5528666bae88f847787b2"
+    },
+    "results/learning-history.json": {
+      "original_path": "report/extended-learning-v1/data.json",
+      "sha256": "d7549861596306749455919adf9cde1fd41d3adc6e6a227b96c16ca5958ee7a5"
+    },
+    "figures/01_metrics_vs_parameters.png": {
+      "original_path": "report/dense-vs-grown-v2/01_metrics_vs_parameters.png",
+      "sha256": "8b0b6f4a46c6a81b84cba3b922172fcfbed949d0c178485ab9f246ceefded857"
+    },
+    "figures/01_metrics_vs_parameters.svg": {
+      "original_path": "report/dense-vs-grown-v2/01_metrics_vs_parameters.svg",
+      "sha256": "4bb8ebe63d28d1032c55813bbbadd976f18ca6ddcae11cca1f00c1cefacad9ad"
+    },
+    "figures/02_resources.png": {
+      "original_path": "report/dense-vs-grown-v2/02_resources.png",
+      "sha256": "9f429e87475a230ef44739538a2b6d840802e1c6f07a58631d45735cc0b0a20b"
+    },
+    "figures/02_resources.svg": {
+      "original_path": "report/dense-vs-grown-v2/02_resources.svg",
+      "sha256": "8a6891ec66eb727d09c0cb4d2de8898600a28890a9468eeafbc0e57ef3574757"
+    },
+    "figures/03_sample_comparison.png": {
+      "original_path": "report/dense-vs-grown-v2/03_sample_comparison.png",
+      "sha256": "36416cd99f9da4e7d1e6457da4672348f6c5517e5f5e2408ded966e267057a9d"
+    },
+    "figures/learning-and-rank.png": {
+      "original_path": "report/extended-learning-v1/learning-and-rank.png",
+      "sha256": "b76e171e4ccad32613a62a8f3b18016816f5194eaf4d5c5a2ecbbd17ac3f0c61",
+      "packaged_sha256": "87178f26666a066f30fd7554d60ca402259fce83e6ae36bf31e9513bda071954",
+      "change": "Regenerated from identical recorded learning data with research typography and a neutral caption."
+    },
+    "figures/learning-and-rank.svg": {
+      "original_path": "report/extended-learning-v1/learning-and-rank.svg",
+      "sha256": "5b916747dfd82f352b5478050af54d6105812c2137f784e9b9c31fc9d5e1364e",
+      "packaged_sha256": "cdf867b035eedb3562a4effb0f515ec1526e4f493102e26a5d02d52a41db4fae",
+      "change": "Regenerated from identical recorded learning data with research typography and a neutral caption."
+    },
+    "animations/finetuning.gif": {
+      "original_path": "report/animations/converged-gilorat-17-ft-compact-v1/preview.gif",
+      "sha256": "d2616f465462a3060069d360665ed798cdb82d612ed0f2192346ce9b2e05408e"
+    },
+    "animations/finetuning-manifest.json": {
+      "original_path": "report/animations/converged-gilorat-17-ft-compact-v1/manifest.json",
+      "sha256": "f43eac9d9cb91e5e7a7cf4166c5d3c34a2f4674075a13f5f8060a732bc595a0b"
+    }
+  },
+  "scope": "Curated MTP source/evidence release; measured core modules byte-identical. Only asset revision pinning and analysis path layout are packaging changes. Original data, checkpoints, raw images and source archive preserved locally. Figure inputs filter the report to dense17 and grown17 only.",
+  "source_preservation_verified_unix": 1792694180.8965974
+}

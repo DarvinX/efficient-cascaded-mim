@@ -1,0 +1,141 @@
+{
+  "created_unix": 1792692849.6721888,
+  "seed": 17,
+  "n": 2048,
+  "split": "val",
+  "rows": {
+    "Dense": {
+      "clean_fid": 66.14685865600097,
+      "kid": 0.06986492872238159,
+      "clip_cosine_mean": 0.34476450579677476,
+      "phase_parameters": {
+        "b": 112623564,
+        "c": 259178304,
+        "finetune": 109745408
+      },
+      "phase_training_peak_allocated_gib": {
+        "b": 3.446465015411377,
+        "c": 5.373178958892822,
+        "finetune": 3.707273006439209
+      },
+      "selected_updates": {
+        "b": 19500,
+        "c": 10000,
+        "finetune": 14030
+      },
+      "completed_updates": {
+        "b": 20000,
+        "c": 10000,
+        "finetune": 14030
+      },
+      "generator_weights": 368923712,
+      "generation_peak_allocated_gib": 4.295350551605225,
+      "generation_peak_reserved_gib": 4.857421875
+    },
+    "Grown": {
+      "clean_fid": 95.10044783777721,
+      "kid": 0.10745406895875931,
+      "clip_cosine_mean": 0.3426434154389426,
+      "clip_caption_retrieval_at_1": 0.03857421875,
+      "clip_alignment_margin": 0.03247669339179993,
+      "phase_parameters": {
+        "b": 28868556,
+        "c": 7323456,
+        "finetune": 25990400
+      },
+      "phase_training_peak_allocated_gib": {
+        "b": null,
+        "c": null,
+        "finetune": null
+      },
+      "selected_updates": {
+        "b": 385500,
+        "c": 228500,
+        "finetune": 89500
+      },
+      "completed_updates": {
+        "b": 387453,
+        "c": 229472,
+        "finetune": 91059
+      },
+      "generator_weights": 33313856,
+      "generation_peak_allocated_gib": 1.6288976669311523,
+      "generation_peak_reserved_gib": 2.134765625
+    }
+  },
+  "qualitative_samples": [
+    {
+      "row_id": 0,
+      "caption": "a pixel art character with square black glasses, a hotdog-shaped head and a peachy-colored body on a warm background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000000.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000000.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000000.png"
+      ]
+    },
+    {
+      "row_id": 25,
+      "caption": "a pixel art character with square glasses with black frames and red eyes, a microwave-shaped head and a grayscale-colored body on a cool background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000025.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000025.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000025.png"
+      ]
+    },
+    {
+      "row_id": 33,
+      "caption": "a pixel art character with square orange glasses, a peyote-shaped head and a purple-colored body on a cool background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000033.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000033.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000033.png"
+      ]
+    },
+    {
+      "row_id": 41,
+      "caption": "a pixel art character with square green glasses, a ufo-shaped head and a rust-colored body on a warm background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000041.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000041.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000041.png"
+      ]
+    },
+    {
+      "row_id": 52,
+      "caption": "a pixel art character with square orange glasses, a mailbox-shaped head and a hotbrown-colored body on a warm background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000052.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000052.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000052.png"
+      ]
+    },
+    {
+      "row_id": 71,
+      "caption": "a pixel art character with square dark gray glasses, a wall-shaped head and a darkbrown-colored body on a cool background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000071.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000071.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000071.png"
+      ]
+    },
+    {
+      "row_id": 111,
+      "caption": "a pixel art character with square blue glasses, a boot-shaped head and a red-colored body on a cool background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000111.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000111.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000111.png"
+      ]
+    },
+    {
+      "row_id": 113,
+      "caption": "a pixel art character with square pink and red glasses, a maze-shaped head and a grayscale-colored body on a cool background",
+      "files": [
+        "analysis_inputs/full-17/references-val/000113.png",
+        "analysis_inputs/full-17/samples-val-g1.0/000113.png",
+        "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000113.png"
+      ]
+    }
+  ],
+  "scope": "Dense versus actual grown B8/C10 with fixed-rank8 FT only. Both training seed17; same validation rows/references. Different training budgets and independently sampled native final images. Shared frozen VQ/text excluded from learned weights; EfficientNet included only during joint B. Grown full-training peak memory unavailable; no new timing, speed, causal growth or replicated superiority claim. All grown training phases explicitly user-ended before plateau."
+}

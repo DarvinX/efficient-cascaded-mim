@@ -1,0 +1,138 @@
+[
+  {
+    "repo": "m1guelpf/nouns",
+    "type": "dataset",
+    "revision": "505bb434cc751d0b5158ae82f368a7c63e7a94c6",
+    "files": [
+      {
+        "path": "data/nouns/README.md",
+        "bytes": 921,
+        "sha256": "4a12e8bb4e5422613405a81b9de2728b1e6e6e32c3593298a2b19fa7793f8821"
+      },
+      {
+        "path": "data/nouns/data/train-00000-of-00001-72206f7d9a3e29b2.parquet",
+        "bytes": 328227603,
+        "sha256": "56e4d7b28304acd14fe6f7b54b9d95af62062a528db001507b692ba8c5e34e9a"
+      },
+      {
+        "path": "data/nouns/dataset_infos.json",
+        "bytes": 1008,
+        "sha256": "2e5910c550b906d16f8f127363bce8d0398897fb33ee7de11bfef2f9c0e68721"
+      }
+    ]
+  },
+  {
+    "repo": "amused/amused-256",
+    "type": "model",
+    "revision": "09b6259bf96dbe6d70a852b70812420fe02df55e",
+    "files": [
+      {
+        "path": "models/amused-256/README.md",
+        "bytes": 23705,
+        "sha256": "82b63fc14c9378ed487bb35db43a25bea01a3d02638194836fa3bda8f355713c"
+      },
+      {
+        "path": "models/amused-256/model_index.json",
+        "bytes": 387,
+        "sha256": "83e1100c6ee72a023b5adce33d9d3514819fa69c2751d1463eec77f3cbc2cf35"
+      },
+      {
+        "path": "models/amused-256/scheduler/scheduler_config.json",
+        "bytes": 135,
+        "sha256": "b72446a3510d2b342fab32e3496f228548843805ed1bfb319df4962e9d80bdff"
+      },
+      {
+        "path": "models/amused-256/text_encoder/config.json",
+        "bytes": 574,
+        "sha256": "55c0f3a62baaf5bb56b8839049526a640002557fa22e0e0fec606bd5b56ba567"
+      },
+      {
+        "path": "models/amused-256/text_encoder/model.fp16.safetensors",
+        "bytes": 247323896,
+        "sha256": "549d39f40a16f8ef48ed56da60cd25a467bd2c70866f4d49196829881b13b7b2"
+      },
+      {
+        "path": "models/amused-256/tokenizer/merges.txt",
+        "bytes": 524619,
+        "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+      },
+      {
+        "path": "models/amused-256/tokenizer/special_tokens_map.json",
+        "bytes": 574,
+        "sha256": "c2d0fb8b86ad86b1f46134d4a5f93fd1e688c932a78efc8d149087c33a53ad06"
+      },
+      {
+        "path": "models/amused-256/tokenizer/tokenizer_config.json",
+        "bytes": 855,
+        "sha256": "516314ccab66918d7cb647480ac27abd3520d14e1e5825aac99f50c851c16071"
+      },
+      {
+        "path": "models/amused-256/tokenizer/vocab.json",
+        "bytes": 1059962,
+        "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+      },
+      {
+        "path": "models/amused-256/transformer/config.json",
+        "bytes": 646,
+        "sha256": "8fd0d22d032db3bacfc270f9101fda9d45b8f1d5fa4dc9cddd183f0f5be0ea92"
+      },
+      {
+        "path": "models/amused-256/transformer/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 1207130008,
+        "sha256": "49b6e7c8f858a6f9f6ef4f240aea9e46046f9c12ff919b81247f20f299dec272"
+      },
+      {
+        "path": "models/amused-256/vqvae/config.json",
+        "bytes": 804,
+        "sha256": "b063b798b8233405fed3844538db899100b6d018aff0d670b66e192ed1e5e9d5"
+      },
+      {
+        "path": "models/amused-256/vqvae/diffusion_pytorch_model.safetensors",
+        "bytes": 585009980,
+        "sha256": "1241a5c88b635af4f8cfb268e388ccaa70f55a458a473d68943e5c28d7b7f762"
+      }
+    ]
+  },
+  {
+    "repo": "openai/clip-vit-base-patch32",
+    "type": "model",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "files": [
+      {
+        "path": "models/clip-eval/config.json",
+        "bytes": 4186,
+        "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770"
+      },
+      {
+        "path": "models/clip-eval/merges.txt",
+        "bytes": 524657,
+        "sha256": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85"
+      },
+      {
+        "path": "models/clip-eval/preprocessor_config.json",
+        "bytes": 316,
+        "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd"
+      },
+      {
+        "path": "models/clip-eval/pytorch_model.bin",
+        "bytes": 605247071,
+        "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+      },
+      {
+        "path": "models/clip-eval/special_tokens_map.json",
+        "bytes": 389,
+        "sha256": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf"
+      },
+      {
+        "path": "models/clip-eval/tokenizer_config.json",
+        "bytes": 592,
+        "sha256": "34b7336e4bee12e0a9730eaf5189f582ef3c3eea5027f65730e5717256755aad"
+      },
+      {
+        "path": "models/clip-eval/vocab.json",
+        "bytes": 862328,
+        "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+      }
+    ]
+  }
+]

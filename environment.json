@@ -1,0 +1,8 @@
+{
+  "python": "3.13.5",
+  "torch": "2.14.0+cu130",
+  "torchvision": "0.29.0+cu130",
+  "GPU": "NVIDIA GeForce RTX 5060 Ti, 16GB",
+  "precision": "BF16 autocast",
+  "scope": "Recorded local campaign environment; not a fresh-machine GPU re-training certification."
+}

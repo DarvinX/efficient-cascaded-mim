@@ -1,0 +1,6 @@
+{
+  "url": "https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/inception-2015-12-05.pt",
+  "path": "models/inception/inception-2015-12-05.pt",
+  "bytes": 95607719,
+  "sha256": "f58cb9b6ec323ed63459aa4fb441fe750cfe39fafad6da5cb504a16f19e958f4"
+}

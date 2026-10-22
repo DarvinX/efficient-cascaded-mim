@@ -1,0 +1,19 @@
+{
+  "samples": 2048,
+  "seconds_per_image": 0.13551714633642575,
+  "images_this_process": 2048,
+  "resumed_from_image": 0,
+  "generation_seconds_completed_segments": 277.53911569699994,
+  "timing_scope": "durable image generation including PNG/fsync/progress writes; model loading and final grid excluded; resumed segments are not an uninterrupted latency measurement",
+  "sample_dir": "/home/t_hansda/Desktop/MTP/reproduction/runs/converged-gilorat-17/samples-val-g1.0",
+  "reference_dir": "/home/t_hansda/Desktop/MTP/reproduction/runs/converged-gilorat-17/references-val",
+  "b_checkpoint": "finetune-best.pt",
+  "guidance": 1.0,
+  "peak_cuda_gib": 1.6288976669311523,
+  "peak_reserved_gib": 2.134765625,
+  "wall_seconds": 280.2109738549989,
+  "wall_seconds_excluding_progress_images": 280.2109738549989,
+  "stage": "generate",
+  "code_revision": "62c3fa03f0b04d0a4999ed8a4f76544e1d9bd64b",
+  "config_sha256": "a1772786fe65c74df0e7a0e0f10f635188c2a8dbc4d443f05f83bd20171d8cac"
+}

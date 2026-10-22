@@ -1,0 +1,41 @@
+{
+  "protocol": "curated-release-cpu-metric-replay-v1",
+  "status": "pass",
+  "results": {
+    "dense-17": {
+      "FID": 66.14685865600094,
+      "CLIP": 0.3447645057240152,
+      "PRDC_k5": {
+        "precision": 0.30322265625,
+        "recall": 0.78271484375,
+        "density": 0.11923828125,
+        "coverage": 0.32421875
+      },
+      "caption_retrieval": {
+        "R@1": 0.0498046875,
+        "R@5": 0.126953125,
+        "R@10": 0.17578125
+      },
+      "displayed_PNGs": "SHA256 match native evaluation",
+      "status": "pass"
+    },
+    "grown-17": {
+      "FID": 95.10044783777718,
+      "CLIP": 0.34264341635571327,
+      "PRDC_k5": {
+        "precision": 0.1484375,
+        "recall": 0.67333984375,
+        "density": 0.04453125,
+        "coverage": 0.1376953125
+      },
+      "caption_retrieval": {
+        "R@1": 0.03857421875,
+        "R@5": 0.1162109375,
+        "R@10": 0.16552734375
+      },
+      "displayed_PNGs": "SHA256 match native evaluation",
+      "status": "pass"
+    }
+  },
+  "scope": "Saved validation features and displayed PNGs only. KID remains the native recorded subsample estimate; original subset draws were not serialized. No GPU, test evaluation or checkpoint selection."
+}

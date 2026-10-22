@@ -1,0 +1,51 @@
+{
+  "name": "full-pipeline-gilorat",
+  "cache": "data/cached-full",
+  "seed": 17,
+  "batch": 4,
+  "accumulate": 8,
+  "b": {
+    "dim": 768,
+    "depth": 12,
+    "heads": 12
+  },
+  "c": {
+    "dim": 1152,
+    "depth": 16,
+    "heads": 16
+  },
+  "b_steps": 1000000,
+  "c_steps": 1000000,
+  "finetune_epochs": 1000,
+  "lr": 0.0001,
+  "finetune_lr": 2e-05,
+  "weight_decay": 0.01,
+  "eval_every": 500,
+  "val_samples": 512,
+  "diffusion_weight": "inverse_variance",
+  "standardize": false,
+  "cond_dropout": 0.0,
+  "feature_mix": 0.0,
+  "ddim_steps": 50,
+  "sampling_steps": 12,
+  "rng_protocol": 2,
+  "progress_samples": 8,
+  "checkpoint_every": 100,
+  "checkpoint_seconds": 60,
+  "gilorat": {
+    "initial_rank": 2,
+    "increment": 2,
+    "max_rank_divisor": 3,
+    "patience_factor": 2,
+    "score_threshold": 0.001,
+    "orthogonal_weight": 0.0
+  },
+  "b_gilorat": {
+    "initial_rank": 2,
+    "increment": 2,
+    "max_rank_divisor": 3,
+    "patience_factor": 2,
+    "score_threshold": 0.001,
+    "orthogonal_weight": 0.0
+  }
+}

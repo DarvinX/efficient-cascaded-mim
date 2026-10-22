@@ -1,0 +1,123 @@
+{
+  "protocol": "user-ended-cascade-saved-evidence-v1",
+  "created_unix": 1792690885.7704976,
+  "run": "converged-gilorat-17",
+  "seed": 17,
+  "n": 2048,
+  "split": "val",
+  "primary_metrics": {
+    "clean_fid": 95.10044783777721,
+    "kid": 0.10745406895875931,
+    "clip_cosine_mean": 0.3426434154389426,
+    "clip_caption_retrieval_at_1": 0.03857421875,
+    "clip_alignment_margin": 0.03247669339179993
+  },
+  "PRDC": {
+    "3": {
+      "precision": 0.08935546875,
+      "recall": 0.5341796875,
+      "density": 0.036946614583333336,
+      "coverage": 0.0791015625
+    },
+    "5": {
+      "precision": 0.1484375,
+      "recall": 0.67333984375,
+      "density": 0.04453125,
+      "coverage": 0.1376953125
+    },
+    "10": {
+      "precision": 0.27685546875,
+      "recall": 0.8212890625,
+      "density": 0.060888671875,
+      "coverage": 0.26806640625
+    }
+  },
+  "caption_retrieval": {
+    "R@1": 0.03857421875,
+    "R@5": 0.1162109375,
+    "R@10": 0.16552734375
+  },
+  "selected_phases": {
+    "b": {
+      "step": 385500,
+      "rank": 8,
+      "trainable_parameters": 28868556,
+      "converged": false
+    },
+    "c": {
+      "step": 228500,
+      "rank": 10,
+      "trainable_parameters": 7323456,
+      "converged": false
+    },
+    "finetune": {
+      "step": 89500,
+      "rank": 8,
+      "trainable_parameters": 25990400,
+      "converged": false
+    }
+  },
+  "generation_resources": {
+    "samples": 2048,
+    "seconds_per_image": 0.13551714633642575,
+    "images_this_process": 2048,
+    "resumed_from_image": 0,
+    "generation_seconds_completed_segments": 277.53911569699994,
+    "timing_scope": "durable image generation including PNG/fsync/progress writes; model loading and final grid excluded; resumed segments are not an uninterrupted latency measurement",
+    "sample_dir": "/home/t_hansda/Desktop/MTP/reproduction/runs/converged-gilorat-17/samples-val-g1.0",
+    "reference_dir": "/home/t_hansda/Desktop/MTP/reproduction/runs/converged-gilorat-17/references-val",
+    "b_checkpoint": "finetune-best.pt",
+    "guidance": 1.0,
+    "peak_cuda_gib": 1.6288976669311523,
+    "peak_reserved_gib": 2.134765625,
+    "wall_seconds": 280.2109738549989,
+    "wall_seconds_excluding_progress_images": 280.2109738549989,
+    "stage": "generate",
+    "code_revision": "62c3fa03f0b04d0a4999ed8a4f76544e1d9bd64b",
+    "config_sha256": "a1772786fe65c74df0e7a0e0f10f635188c2a8dbc4d443f05f83bd20171d8cac"
+  },
+  "training_peak_allocated_VRAM": null,
+  "audit": {
+    "all33_guards_match": true,
+    "selected_checkpoints_match": true,
+    "all4096_sample_reference_PNG_hashes_match": true,
+    "identical_original2048_validation_rows_and_real_embeddings": true,
+    "recomputed_FID": 95.10044783777718,
+    "recomputed_CLIP_mean": 0.34264341635571327,
+    "PRDC_reference_check": {
+      "official_commit": "e320c1d2811d33081361a08f595b43830b78641c",
+      "fixture_sizes": [
+        83,
+        79
+      ],
+      "nearest_k": [
+        3,
+        5,
+        10
+      ],
+      "maximum_difference": 0.0,
+      "self_manifold_check": "passed"
+    },
+    "all_training_phases_explicitly_user_ended": true
+  },
+  "source_sha256": {
+    "configs/user-ended-evaluation-v1.json": "40b036bf2db7e8130a2084d8f35cbbc7228f17e99762853d4cad43bd795ad8b8",
+    "results/user-ended-evaluation-v1-state.json": "e65f3e57415eae0866eee816de91702b3acde3f3215898b0c8933e67fc40e842",
+    "report/data/final-analysis.json": "37a511c37edfdbb6048e9b9743b9d1af40683915e19d78694801bb69ec4450fb",
+    "scripts/final_analysis.py": "5d61b7359aacc58310c8451b90b784c64b640cdb3122e8c65dfe816714f41484",
+    "scripts/analyze_user_ended.py": "08b2486669c3b834ef16eadce899616cd4749110a130929fa8a69efba1d7645a",
+    "evaluate.py": "94951fdbf28d016641ac45c8e97ac4eec625fb77ea0fabc68c733b201a81d7fe",
+    "runs/converged-gilorat-17/config.json": "e73292c5be9df335fc6880364b008ac3d6a39f708f97b31c428e1ec4624eb847",
+    "runs/converged-gilorat-17/generate-summary.json": "e7dd757ab2e84c638b8b1f48b06ac7f6414fcc0b70e5aad4f17f33ee9cfcf80b",
+    "runs/converged-gilorat-17/quality-summary.json": "f24c3fa0ef0ddb83e9c0c6402b856dbb0393083456929e87dc8c19f3b370b2bb",
+    "runs/converged-gilorat-17/quality-val-g1.0.json": "ce18444d719e481850d81489099f92776a1875f71b6ebc152ac3ebeb0b18a706",
+    "runs/converged-gilorat-17/inception-features-val-g1.0.npz": "043ac82f1eef4768d92f4afa5c5bdf4348b1e9a636e8a7990bb633a826e2ec41",
+    "runs/converged-gilorat-17/clip-embeddings-val-g1.0.npz": "6869f1f50278dbb5cf7365c4ff088cf12500975e4fff2325c4f4f6d8b734be99",
+    "runs/converged-gilorat-17/samples-val-g1.0/.generation-contract.json": "2cf31c8a645fb1ce0d6ff001e9e5097a292ecf13acb9a975cf0b57a30251355e",
+    "runs/converged-gilorat-17/samples-val-g1.0/prompts.json": "a4990e4e1af695e84f208d4836d2d0fe1c627725d4971c5f7e17c1160f52ddea",
+    "runs/converged-gilorat-17/b-user-phase-end.json": "106d4ee7a87be2b3c8174e5870bcf2da39a387b37efcf2a08f1c603d4428f010",
+    "runs/converged-gilorat-17/c-user-phase-end.json": "9eb36823b03c8a5082da6f3ccd9fb7e87209129e381885f3251e61cff51bc4f9",
+    "runs/converged-gilorat-17/finetune-user-phase-end.json": "9b14a4a7b4da171a392e78af31961626f21aceab22f815e8abe02378b10b99c7"
+  },
+  "scope": "Single longer-budget growing-rank cascade with fixed-rank FT, user-ended before all-phase plateau. Historical dense/rank2 groups have3 seeds each. Descriptive validation comparison only, not causal growth benefit, replicated superiority, matched-budget speedup, original-thesis FID equivalence or test evaluation. Training peak VRAM was not retained across human-ended phases; native complete-generation peak is separately reported."
+}

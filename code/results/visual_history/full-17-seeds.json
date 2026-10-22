@@ -1,0 +1,60 @@
+{
+  "samples": [
+    {
+      "row_id": 0,
+      "caption": "a pixel art character with square black glasses, a hotdog-shaped head and a peachy-colored body on a warm background",
+      "seed": 260647022659562986,
+      "feature_seed": 260647022659562986,
+      "token_seed": 260647022659562987
+    },
+    {
+      "row_id": 25,
+      "caption": "a pixel art character with square glasses with black frames and red eyes, a microwave-shaped head and a grayscale-colored body on a cool background",
+      "seed": 5132071391096146848,
+      "feature_seed": 5132071391096146848,
+      "token_seed": 5132071391096146849
+    },
+    {
+      "row_id": 33,
+      "caption": "a pixel art character with square orange glasses, a peyote-shaped head and a purple-colored body on a cool background",
+      "seed": 7213138835298209968,
+      "feature_seed": 7213138835298209968,
+      "token_seed": 7213138835298209969
+    },
+    {
+      "row_id": 41,
+      "caption": "a pixel art character with square green glasses, a ufo-shaped head and a rust-colored body on a warm background",
+      "seed": 3824282338822577664,
+      "feature_seed": 3824282338822577664,
+      "token_seed": 3824282338822577665
+    },
+    {
+      "row_id": 52,
+      "caption": "a pixel art character with square orange glasses, a mailbox-shaped head and a hotbrown-colored body on a warm background",
+      "seed": 6832353323518938045,
+      "feature_seed": 6832353323518938045,
+      "token_seed": 6832353323518938046
+    },
+    {
+      "row_id": 71,
+      "caption": "a pixel art character with square dark gray glasses, a wall-shaped head and a darkbrown-colored body on a cool background",
+      "seed": 7601654885039788755,
+      "feature_seed": 7601654885039788755,
+      "token_seed": 7601654885039788756
+    },
+    {
+      "row_id": 111,
+      "caption": "a pixel art character with square blue glasses, a boot-shaped head and a red-colored body on a cool background",
+      "seed": 4181550027856419439,
+      "feature_seed": 4181550027856419439,
+      "token_seed": 4181550027856419440
+    },
+    {
+      "row_id": 113,
+      "caption": "a pixel art character with square pink and red glasses, a maze-shaped head and a grayscale-colored body on a cool background",
+      "seed": 7719569392180741795,
+      "feature_seed": 7719569392180741795,
+      "token_seed": 7719569392180741796
+    }
+  ]
+}

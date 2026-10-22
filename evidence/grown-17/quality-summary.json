@@ -1,0 +1,22 @@
+{
+  "clean_fid": 95.10044783777721,
+  "kid": 0.10745406895875931,
+  "clip_cosine_mean": 0.3426434154389426,
+  "clip_cosine_std": 0.023642515633196942,
+  "n": 2048,
+  "split": "val",
+  "guidance": 1.0,
+  "reference": "fixed held-out images, resized RGB256; clean-fid 0.1.35 preprocessing/detector; mathematically equivalent PSD/SVD FID calculation for SciPy1.18 compatibility",
+  "warning": "FID is sample-count sensitive; thesis FID191.8 has unknown protocol and is not directly comparable",
+  "clip_cosine_shuffled": 0.31016671657562256,
+  "clip_alignment_margin": 0.03247669339179993,
+  "clip_real_reference_cosine_mean": 0.33385999454185367,
+  "clip_caption_retrieval_at_1": 0.03857421875,
+  "peak_cuda_gib": 0.654841423034668,
+  "peak_reserved_gib": 0.73828125,
+  "wall_seconds": 29.739060334002716,
+  "wall_seconds_excluding_progress_images": 29.739060334002716,
+  "stage": "quality",
+  "code_revision": "0abe55dc67d094693e212fb7b5d913858cb72af4",
+  "config_sha256": "a1772786fe65c74df0e7a0e0f10f635188c2a8dbc4d443f05f83bd20171d8cac"
+}
