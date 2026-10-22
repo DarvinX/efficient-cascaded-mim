@@ -307,7 +307,9 @@
     },
     "results/comparison-source-manifest.json": {
       "original_path": "report/dense-vs-grown-v2/manifest.json",
-      "sha256": "5a57c093c35ffa60f7c88fe08ffe9491f33f2d289ba5528666bae88f847787b2"
+      "sha256": "5a57c093c35ffa60f7c88fe08ffe9491f33f2d289ba5528666bae88f847787b2",
+      "packaged_sha256": "288f17c022a89e68e9c359c0016506b520515e5307fd1013b8d8be73c342cb86",
+      "change": "Preserves original native source/artifact hashes and adds hashes for the two-panel packaged resource figure."
     },
     "results/learning-history.json": {
       "original_path": "report/extended-learning-v1/data.json",
@@ -324,14 +326,14 @@
     "figures/02_resources.png": {
       "original_path": "report/dense-vs-grown-v2/02_resources.png",
       "sha256": "9f429e87475a230ef44739538a2b6d840802e1c6f07a58631d45735cc0b0a20b",
-      "packaged_sha256": "26cb18d1daeafc9ee37b24749c8597ae8c8c1fd4ea363625f7a921a8e6bcfc08",
-      "change": "Regenerated from identical recorded data; neutral resource caption removes conversational phase-stop wording."
+      "packaged_sha256": "7ee197f394f860f93e604588426e33f343aa6724912871b76597742b9424ece7",
+      "change": "Re-rendered from the same numerical rows with only parameter and generation-memory panels; training-memory and completed-update panels omitted by presentation request."
     },
     "figures/02_resources.svg": {
       "original_path": "report/dense-vs-grown-v2/02_resources.svg",
       "sha256": "8a6891ec66eb727d09c0cb4d2de8898600a28890a9468eeafbc0e57ef3574757",
-      "packaged_sha256": "888a1c48029342253a3708c9ae2e6a7988203a33e4ae80447eb860d4d3ba9f10",
-      "change": "Regenerated from identical recorded data; neutral resource caption removes conversational phase-stop wording."
+      "packaged_sha256": "c6baec84c6588352a97969ed3e9cf8118b35269cc4d791e624e6f900dfda30a4",
+      "change": "Re-rendered from the same numerical rows with only parameter and generation-memory panels; training-memory and completed-update panels omitted by presentation request."
     },
     "figures/03_sample_comparison.png": {
       "original_path": "report/dense-vs-grown-v2/03_sample_comparison.png",

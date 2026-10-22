@@ -55,10 +55,10 @@
     "Full-size metric/resource and sample-grid review found no clipping or caption overlap."
   ],
   "packaging_updates": {
-    "reason": "Neutral resource caption only; numerical rows and qualitative sample identities unchanged.",
+    "reason": "Two-panel parameter and generation-memory figure; numerical source rows and sample identities unchanged.",
     "artifacts_sha256": {
-      "02_resources.png": "26cb18d1daeafc9ee37b24749c8597ae8c8c1fd4ea363625f7a921a8e6bcfc08",
-      "02_resources.svg": "888a1c48029342253a3708c9ae2e6a7988203a33e4ae80447eb860d4d3ba9f10"
+      "02_resources.png": "7ee197f394f860f93e604588426e33f343aa6724912871b76597742b9424ece7",
+      "02_resources.svg": "c6baec84c6588352a97969ed3e9cf8118b35269cc4d791e624e6f900dfda30a4"
     }
   }
 }

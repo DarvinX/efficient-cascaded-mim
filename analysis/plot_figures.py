@@ -88,46 +88,31 @@ def metric_plot(rows):
 
 
 def resource_plot(rows):
-    fig, axes = plt.subplots(2, 2, figsize=(13.5, 8))
+    fig, axes = plt.subplots(1, 2, figsize=(13.5, 4.8))
     phases, labels, x, width = ("b", "c", "finetune"), ("Joint B", "Diffusion C", "B fine-tuning"), np.arange(3), .34
     for method, offset in (("Dense", -.18), ("Grown", .18)):
         r = rows[method]
-        bars = axes[0, 0].bar(x + offset, [r["phase_parameters"][p] / 1e6 for p in phases], width,
-                              color=COLORS[method], label=method, zorder=3)
-        axes[0, 0].bar_label(bars, fmt="%.1f", fontsize=8, padding=3)
+        bars = axes[0].bar(x + offset, [r["phase_parameters"][p] / 1e6 for p in phases], width,
+                           color=COLORS[method], label=method, zorder=3)
+        axes[0].bar_label(bars, fmt="%.1f", fontsize=9, padding=3)
         gen = [r["generation_peak_allocated_gib"], r["generation_peak_reserved_gib"]]
-        bars = axes[0, 1].bar(np.arange(2) + offset, gen, width, color=COLORS[method], label=method, zorder=3)
-        axes[0, 1].bar_label(bars, fmt="%.2f", fontsize=8, padding=3)
-        bars = axes[1, 1].bar(x + offset, [r["completed_updates"][p] / 1000 for p in phases], width,
-                              color=COLORS[method], zorder=3)
-        axes[1, 1].bar_label(bars, fmt="%.1f", fontsize=8, padding=3)
-    dense_peaks = [rows["Dense"]["phase_training_peak_allocated_gib"][p] for p in phases]
-    bars = axes[1, 0].bar(x - .18, dense_peaks, width, color=COLORS["Dense"], zorder=3)
-    axes[1, 0].bar_label(bars, fmt="%.2f", fontsize=8, padding=3)
-    for index in x:
-        axes[1, 0].text(index + .18, .22, "N/A", ha="center", color=COLORS["Grown"], fontsize=10)
-    axes[0, 0].set_title("(a) Trainable parameters by training phase", loc="left", pad=15)
-    axes[0, 0].set_ylabel("Parameters (M)")
-    axes[0, 0].set_ylim(0, 310)
-    axes[0, 0].legend(fontsize=9)
-    axes[0, 1].set_title("(b) Complete-generation peak GPU memory", loc="left", pad=15)
-    axes[0, 1].set_ylabel("PyTorch memory (GiB)")
-    axes[0, 1].set_xticks([0, 1], ["Allocated", "Reserved"])
-    axes[0, 1].set_ylim(0, 5.9)
-    axes[0, 1].legend(fontsize=9)
-    axes[1, 0].set_title("(c) Recorded training peak GPU allocation", loc="left", pad=15)
-    axes[1, 0].set_ylabel("PyTorch allocation (GiB)")
-    axes[1, 0].set_ylim(0, 6.4)
-    axes[1, 1].set_title("(d) Completed training updates", loc="left", pad=15)
-    axes[1, 1].set_ylabel("Optimizer updates (thousands)")
-    axes[1, 1].set_ylim(0, 470)
-    for ax in (axes[0, 0], axes[1, 0], axes[1, 1]):
-        ax.set_xticks(x, labels)
-    for ax in axes.flat:
+        bars = axes[1].bar(np.arange(2) + offset, gen, width, color=COLORS[method], label=method, zorder=3)
+        axes[1].bar_label(bars, fmt="%.2f", fontsize=9, padding=3)
+    axes[0].set_title("(a) Trainable parameters by training phase", loc="left", pad=15)
+    axes[0].set_ylabel("Parameters (M)")
+    axes[0].set_ylim(0, 310)
+    axes[0].set_xticks(x, labels)
+    axes[0].legend(fontsize=9)
+    axes[1].set_title("(b) Complete-generation peak GPU memory", loc="left", pad=15)
+    axes[1].set_ylabel("PyTorch memory (GiB)")
+    axes[1].set_xticks([0, 1], ["Allocated", "Reserved"])
+    axes[1].set_ylim(0, 5.9)
+    axes[1].legend(fontsize=9)
+    for ax in axes:
         ax.grid(axis="y", alpha=.25, zorder=0)
-    finish(fig, "02_resources", "Model and compute resources: dense versus grown",
-           "Complete grown training-memory peaks are unavailable (N/A). Panel(d) shows unequal budgets, not wall time or a speedup. Shared frozen assets excluded in(a).",
-           bottom=.14, top=.77)
+    finish(fig, "02_resources", "Model resources: dense versus grown",
+           "Shared frozen assets excluded in (a). Memory in (b) covers complete generation, including frozen components. Unequal training budgets; one seed per arm.",
+           bottom=.20, top=.73)
 
 
 def samples_plot(dense, grown, sources):

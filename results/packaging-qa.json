@@ -1,7 +1,7 @@
 {
   "protocol": "curated-mtp-release-packaging-QA-v1",
   "status": "pass",
-  "checked_unix": 1792696241.013817,
+  "checked_unix": 1792697108.161242,
   "core_modules_byte_identical_to_measured_source": 13,
   "copied_provenance_entries_verified": 86,
   "deterministic_saved_feature_replay": "results/verification.json",
@@ -12,12 +12,21 @@
   ],
   "native_training_entrypoint_help": "pass without GPU job dispatch",
   "local_Markdown_links": "all resolve",
-  "overview_browser_visual_review": "pass; Chrome preview checked typography, pipeline, counts, memory units and unequal-budget caption",
   "animation_decode_and_seed_checks": "B32/C32 new keyframes; FT47 compact keyframes; original eight prompts and seed identity retained",
   "original_native_vault": "preserved; final source inventory covers77217 paths",
   "scope": "Source/evidence packaging and CPU analysis only. No new training, inference, test selection, source/controller guard change or heartbeat activation.",
-  "first_person_documentation": "README, training, evaluation, reproducibility, architecture, notice and citation prose; structured author citation retained.",
+  "first_person_documentation": "Owner voice (my MTP), brief personal attribution, neutral/passive technical prose. MTP architecture and low-rank training explicitly precede the additional local metrics.",
   "thesis_diagram": "Original PNG byte-identical; LaTeX fragment and SHA retained. New vector redraw visually reviewed; dimensions/ranks refer to measured reconstruction.",
   "unchanged_numeric_rows_and_samples": true,
-  "resolved_local_markdown_links": 23
+  "resolved_local_markdown_links": 33,
+  "opening_visual": "First eight grown native validation outputs; all 256x256 RGB tiles copied without pixel changes, resizing or cropping. Reviewed contact sheet. Rebuild script and source hashes included.",
+  "resource_figure_panels": [
+    "(a) trainable parameters by phase",
+    "(b) complete-generation GPU allocation/reservation"
+  ],
+  "README_presentation_references": [
+    "https://github.com/black-forest-labs/flux",
+    "https://github.com/CompVis/stable-diffusion",
+    "https://github.com/lllyasviel/Fooocus"
+  ]
 }

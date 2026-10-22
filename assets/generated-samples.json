@@ -1,0 +1,113 @@
+{
+  "selection": "First eight validation rows, same order as the comparison; no favorable selection.",
+  "method": "Grown seed17; selected B8/C10 cascade; native RGB256 outputs.",
+  "layout": "Two rows, four columns; each 256x256 RGB tile copied without resizing, cropping or pixel changes.",
+  "sources": [
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000000.png",
+      "sha256": "37d540255f93a4164e2e76295dc3b3f6b332e31f72ef3567a2383c9eab3efc50",
+      "sample": {
+        "row_id": 0,
+        "caption": "a pixel art character with square black glasses, a hotdog-shaped head and a peachy-colored body on a warm background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000000.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000000.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000000.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000025.png",
+      "sha256": "cf9a3ecaea58236a794117f73586bdd96f5108d4b255ce8e6b40251d8148a395",
+      "sample": {
+        "row_id": 25,
+        "caption": "a pixel art character with square glasses with black frames and red eyes, a microwave-shaped head and a grayscale-colored body on a cool background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000025.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000025.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000025.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000033.png",
+      "sha256": "24371e42123eb1986e7eb09c9d2e85f948f8296b0aeb1d65ad182c4522b95622",
+      "sample": {
+        "row_id": 33,
+        "caption": "a pixel art character with square orange glasses, a peyote-shaped head and a purple-colored body on a cool background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000033.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000033.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000033.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000041.png",
+      "sha256": "4368e0dfa87ab7c1ed5dd81825873c34298199aff6df140c86303666b48961c3",
+      "sample": {
+        "row_id": 41,
+        "caption": "a pixel art character with square green glasses, a ufo-shaped head and a rust-colored body on a warm background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000041.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000041.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000041.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000052.png",
+      "sha256": "51ba1de6bc1dc10ac90cb831826f6ae58c33ccecec7d0fbe93b0736d826bc127",
+      "sample": {
+        "row_id": 52,
+        "caption": "a pixel art character with square orange glasses, a mailbox-shaped head and a hotbrown-colored body on a warm background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000052.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000052.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000052.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000071.png",
+      "sha256": "8dc1aa97ef00b268b2ca2a0ba4593a127388a79ae11e67e3b8b15a0c318906a1",
+      "sample": {
+        "row_id": 71,
+        "caption": "a pixel art character with square dark gray glasses, a wall-shaped head and a darkbrown-colored body on a cool background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000071.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000071.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000071.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000111.png",
+      "sha256": "ef82f1d08e48c7f79b8edfe6548d9033e4e882321b3fa28117c9bab26b43e734",
+      "sample": {
+        "row_id": 111,
+        "caption": "a pixel art character with square blue glasses, a boot-shaped head and a red-colored body on a cool background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000111.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000111.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000111.png"
+        ]
+      }
+    },
+    {
+      "source": "evidence/grown-17/samples-val-g1.0/000113.png",
+      "sha256": "4430838905cff77f7ca4f95e1296863c2e9c0220174aad0fb8ae437b3386e140",
+      "sample": {
+        "row_id": 113,
+        "caption": "a pixel art character with square pink and red glasses, a maze-shaped head and a grayscale-colored body on a cool background",
+        "files": [
+          "analysis_inputs/full-17/references-val/000113.png",
+          "analysis_inputs/full-17/samples-val-g1.0/000113.png",
+          "analysis_inputs/converged-gilorat-17/samples-val-g1.0/000113.png"
+        ]
+      }
+    }
+  ],
+  "output_sha256": "b5536c59f79c75962c3d3ab1824448f3e39a3f43b21e2fb051bc82f6075b4fd7",
+  "tile_pixel_identity": "pass"
+}

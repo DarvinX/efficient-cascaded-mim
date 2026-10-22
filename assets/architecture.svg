@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" role="img" aria-labelledby="title desc">
   <title id="title">Cascaded masked image modeling: architecture from my MTP</title>
-  <desc id="desc">A vector redraw of the architecture in my thesis. A frozen VQ encoder provides training tokens. During generation, text-conditioned Stage C creates image features, Stage B iteratively predicts image tokens, and the frozen Stage A decoder produces an RGB image. A frozen CLIP text encoder conditions both learned stages. Dimensions refer to the reconstructed implementation.</desc>
+  <desc id="desc">A vector redraw of the architecture in my thesis. A frozen VQ encoder provides training tokens. During generation, text-conditioned Stage C creates image features, Stage B iteratively predicts image tokens, and the frozen Stage A decoder produces an RGB image. A frozen CLIP text encoder conditions both learned stages. Dimensions refer to the recorded implementation.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#536171"/></marker>
     <marker id="textArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#78629a"/></marker>
@@ -24,7 +24,7 @@
   <rect width="1400" height="940" rx="14" fill="#fff"/>
   <path d="M48 23H1352" stroke="#42647c" stroke-width="4"/>
   <text x="48" y="67" class="title">Cascaded masked image modeling</text>
-  <text x="48" y="99" class="sub">Architecture from my MTP · redrawn with the reconstructed model’s dimensions</text>
+  <text x="48" y="99" class="sub">Architecture from my MTP · redrawn with the recorded model’s dimensions</text>
 
   <rect x="32" y="128" width="1336" height="157" rx="12" fill="#f5f7fa"/>
   <text x="52" y="164" class="stage">Stage A</text>
