@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this MTP repository and the related work linked in the README when using the implementation or evaluation."
+type: software
+title: "Efficient Cascaded Masked Image Modeling: MTP Reconstruction and Resource Evaluation"
+authors:
+  - family-names: Hansda
+    given-names: Tamal
+version: 0.1.0
+date-released: 2026-10-23
+repository-code: "https://github.com/DarvinX/efficient-cascaded-mim"
+abstract: "A reconstructed implementation accompanying an MTP on cascaded masked image modeling, with adaptive low-rank training, scoped resource measurements and additional validation diagnostics."

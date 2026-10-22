@@ -1,0 +1,19 @@
+{
+  "protocol": "curated-mtp-release-packaging-QA-v1",
+  "status": "pass",
+  "checked_unix": 1792694462.1812775,
+  "core_modules_byte_identical_to_measured_source": 13,
+  "copied_provenance_entries_verified": 86,
+  "deterministic_saved_feature_replay": "results/verification.json",
+  "focused_figure_PNGs_byte_identical_after_portable_regeneration": [
+    "01_metrics_vs_parameters.png",
+    "02_resources.png",
+    "03_sample_comparison.png"
+  ],
+  "native_training_entrypoint_help": "pass without GPU job dispatch",
+  "local_Markdown_links": "all resolve",
+  "overview_browser_visual_review": "pass; Chrome preview checked typography, pipeline, counts, memory units and unequal-budget caption",
+  "animation_decode_and_seed_checks": "B32/C32 new keyframes; FT47 compact keyframes; original eight prompts and seed identity retained",
+  "original_native_vault": "preserved; final source inventory covers77217 paths",
+  "scope": "Source/evidence packaging and CPU analysis only. No new training, inference, test selection, source/controller guard change or heartbeat activation."
+}
