@@ -2,7 +2,7 @@
 
 ## Read or regenerate the results without a GPU
 
-The figures and native numerical evidence are included. Python 3.13.5 was used locally. For figure regeneration:
+I include the figures and native numerical evidence. I used Python 3.13.5 locally. For figure regeneration:
 
 ```bash
 python -m venv .venv
@@ -19,7 +19,7 @@ The plotting command reads saved evidence only and writes a new `figures-rebuilt
 
 The measured core implementation is in `code/`; its local paths intentionally resolve from that directory. Trainable modules and optimizer/RNG behavior are preserved byte for byte from the measured source. The packaging manifest lists their SHA256 digests. `code/scripts/download_assets.py` additionally pins the exact recorded evaluation CLIP revision instead of resolving a future default.
 
-The recorded CUDA stack is in `environment.json`. Install its matching PyTorch/torchvision CUDA builds, then install the remaining dependencies from `requirements.txt`. The environment was inherited from the verified local CUDA installation; this release does not claim a clean-machine GPU retraining certification.
+The recorded CUDA stack is in `environment.json`. Install its matching PyTorch/torchvision CUDA builds, then install the remaining dependencies from `requirements.txt`. I used my verified local CUDA installation; I have not certified GPU retraining on a clean machine.
 
 Asset download and cache preparation are explicit operations:
 
@@ -43,7 +43,7 @@ python train.py --config configs/dense.json --run dense-17 --seed 17 --stage gen
 python train.py --config configs/dense.json --run dense-17 --seed 17 --stage quality --count 2048 --split val --guidance 1.0
 ```
 
-`configs/grown.json` preserves the extended run's safety ceilings. Those ceilings are not its observed stop points. Its B/C/FT phases were user-ended at 387,453/229,472/91,059 and selected at 385,500/228,500/89,500. Rebuilding its cascade requires the coherent selected B → real targets → C → generated targets → fine-tuned B chain documented in `TRAINING.md`; the earlier downstream targets must not be reused. The exact measured checkpoints are identified below and remain in the local artifact vault rather than being recreated by figure regeneration.
+`configs/grown.json` preserves the extended run's safety ceilings. Those ceilings are not its observed stop points. I ended its B/C/FT phases at 387,453/229,472/91,059 and selected checkpoints at 385,500/228,500/89,500. Rebuilding its cascade requires the coherent selected B → real targets → C → generated targets → fine-tuned B chain documented in `TRAINING.md`; the earlier downstream targets must not be reused. The exact measured checkpoints are identified below and remain in the local artifact vault rather than being recreated by figure regeneration.
 
 For the recorded fixed-rank fine-tuning policy, `code/scripts/train_fixed_rank.py` applies the retained native interception using `code/configs/fixed_rank_policy.json`. This keeps inherited B ranks at 8 while weights train, validates source/configuration hashes and dispatches only fine-tuning for `grown-17`. A native checkpoint with matching grown dimensions and feature-cache lineage is required first.
 
@@ -56,8 +56,8 @@ For the recorded fixed-rank fine-tuning policy, `code/scripts/train_fixed_rank.p
 
 ## Local research archive
 
-The original campaign repository retains all training/checkpoint histories, native PNG masters, source guards, stopped boot-resume state and the full thesis archive. The final byte inventory covers 77,217 native data/model/run paths. That inventory is preservation evidence, not a remote backup. This curated repository contains source, selected numerical evidence, figures and compact animations; raw training caches and optimizer tensors remain outside Git. Resuming a native job requires its original local lineage and explicit execution, not merely opening this repository.
+I retain all training/checkpoint histories, native PNG masters, source guards, stopped boot-resume state and my full thesis archive in my original campaign repository. The final byte inventory covers 77,217 native data/model/run paths. That inventory is preservation evidence, not a remote backup. I include source, selected numerical evidence, figures and compact animations here, while keeping raw training caches and optimizer tensors outside Git. Resuming a native job requires its original local lineage and explicit execution, not merely opening this repository.
 
 ## Reproducibility limits
 
-Reported numbers are native validation results with source/PNG/embedding audits, not a claim of exact original-thesis reproduction or hardware-independent bitwise retraining. The extended arm has one seed and unequal training duration. All phases ended before a verified terminal plateau. Test data remain unscored. These limits accompany the resource savings throughout the README and figures.
+I report native validation results checked against source, PNG and embedding evidence. I do not claim exact reproduction of my original thesis results or hardware-independent bitwise retraining. The extended arm has one seed and unequal training duration, and I ended all phases before a verified terminal plateau. I keep test data unscored and state these limits alongside the resource savings.

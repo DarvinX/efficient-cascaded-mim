@@ -1,0 +1,14 @@
+{
+  "source": "MTP LaTeX source",
+  "figure_reference": "source/Chapters/method.tex:8",
+  "original_image": "source/Images/Complete Architercture.png",
+  "original_image_sha256": "bdd22f88fbfd3aa5afccae6d6c865ccad074c6f40793112b6ecb5d3d598201f5",
+  "preserved_image": "assets/thesis/architecture-original.png",
+  "preserved_image_sha256": "bdd22f88fbfd3aa5afccae6d6c865ccad074c6f40793112b6ecb5d3d598201f5",
+  "method_tex_sha256": "b27d9894948ec6550e7add53beccd6ff67fa9e1a6caac5810534fcbd0200afda",
+  "source_fragment_sha256": "b272fef02dd3b35837304117e92141880af575c02266c4ba71ecab84c72c8e77",
+  "redraw": "assets/architecture.svg",
+  "scope": "Redrawn layout retains Stage A/B/C, CLIP conditioning to B and C, feature cascade and iterative masked sampling. Shapes/dimensions describe the measured reconstruction; historical thesis counts and latent-shape annotations are preserved only in the original figure.",
+  "redraw_sha256": "3b23911e408ce4149edf2f1cbce927f55b30e0a9eb0b0ecfd7a6f289fd2492ae",
+  "visual_review": "Chrome: aligned nodes, readable typography, distinct text/feature routes and no observed node overlap. Matches thesis cascade; reconstruction-specific annotations identified."
+}

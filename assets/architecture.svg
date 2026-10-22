@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" role="img" aria-labelledby="title desc">
+  <title id="title">Cascaded masked image modeling: architecture from my MTP</title>
+  <desc id="desc">A vector redraw of the architecture in my thesis. A frozen VQ encoder provides training tokens. During generation, text-conditioned Stage C creates image features, Stage B iteratively predicts image tokens, and the frozen Stage A decoder produces an RGB image. A frozen CLIP text encoder conditions both learned stages. Dimensions refer to the reconstructed implementation.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#536171"/></marker>
+    <marker id="textArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#78629a"/></marker>
+    <marker id="featureArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#278182"/></marker>
+    <style>
+      text {font-family:Arial,Helvetica,sans-serif;fill:#243242}
+      .title {font-family:Georgia,'Times New Roman',serif;font-size:32px;font-weight:700}
+      .sub {font-size:18px;fill:#607080}
+      .stage {font-size:24px;font-weight:700}
+      .stage-sub {font-size:16px;fill:#607080}
+      .node {font-size:22px;font-weight:600;text-anchor:middle}
+      .detail {font-size:16px;fill:#526172;text-anchor:middle}
+      .tag {font-size:14px;font-weight:700;letter-spacing:1.1px;fill:#607080}
+      .label {font-size:16px;fill:#607080;text-anchor:middle}
+      .wire {fill:none;stroke:#536171;stroke-width:2.5;stroke-linejoin:round;marker-end:url(#arrow)}
+      .condition {fill:none;stroke:#78629a;stroke-width:2.5;stroke-linejoin:round;marker-end:url(#textArrow)}
+      .feature {fill:none;stroke:#278182;stroke-width:2.8;stroke-linejoin:round;marker-end:url(#featureArrow)}
+      .training {stroke-dasharray:7 6;stroke:#93a0ac;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1400" height="940" rx="14" fill="#fff"/>
+  <path d="M48 23H1352" stroke="#42647c" stroke-width="4"/>
+  <text x="48" y="67" class="title">Cascaded masked image modeling</text>
+  <text x="48" y="99" class="sub">Architecture from my MTP · redrawn with the reconstructed model’s dimensions</text>
+
+  <rect x="32" y="128" width="1336" height="157" rx="12" fill="#f5f7fa"/>
+  <text x="52" y="164" class="stage">Stage A</text>
+  <text x="52" y="192" class="stage-sub">Frozen VQ</text>
+  <text x="52" y="214" class="stage-sub">tokenizer / decoder</text>
+
+  <rect x="230" y="173" width="145" height="77" rx="8" fill="#fff" stroke="#c8d0d9"/>
+  <text x="302.5" y="203" class="node" style="font-size:19px">Training image</text>
+  <text x="302.5" y="229" class="detail">RGB 256 × 256</text>
+  <rect x="420" y="173" width="165" height="77" rx="8" fill="#e7edf4" stroke="#bac8d8"/>
+  <text x="502.5" y="202" class="node">VQ encoder</text>
+  <text x="502.5" y="229" class="detail">frozen weights</text>
+  <rect x="630" y="173" width="145" height="77" rx="8" fill="#fff" stroke="#c8d0d9"/>
+  <text x="702.5" y="202" class="node">VQ tokens</text>
+  <text x="702.5" y="229" class="detail">16 × 16 token IDs</text>
+  <path d="M375 211.5H420" class="wire training"/>
+  <path d="M585 211.5H630" class="wire training"/>
+
+  <rect x="850" y="173" width="190" height="77" rx="8" fill="#e7edf4" stroke="#bac8d8"/>
+  <text x="945" y="202" class="node">VQ decoder</text>
+  <text x="945" y="229" class="detail">frozen weights</text>
+  <rect x="1090" y="173" width="240" height="77" rx="8" fill="#fff" stroke="#c8d0d9"/>
+  <text x="1210" y="202" class="node">Generated image</text>
+  <text x="1210" y="229" class="detail">RGB 256 × 256</text>
+  <path d="M1040 211.5H1090" class="wire"/>
+
+  <path d="M32 313H1368" stroke="#dce2e9" stroke-width="1.2"/>
+  <text x="52" y="358" class="stage" fill="#a75b3e">Stage B</text>
+  <text x="52" y="386" class="stage-sub">Masked image</text>
+  <text x="52" y="408" class="stage-sub">modeling</text>
+  <text x="52" y="442" class="stage-sub">learned weights</text>
+
+  <rect x="220" y="433" width="145" height="92" rx="8" fill="#f8f4ef" stroke="#d9c6b4"/>
+  <text x="292.5" y="470" class="node">Masked</text>
+  <text x="292.5" y="498" class="node">tokens</text>
+  <rect x="430" y="423" width="240" height="122" rx="13" fill="#f4e5da" stroke="#c58a66" stroke-width="1.5"/>
+  <text x="550" y="464" class="node">U-ViT / MIM</text>
+  <text x="550" y="493" class="detail">12 blocks · width 768</text>
+  <text x="550" y="520" class="detail">rank 8 in the grown run</text>
+  <rect x="735" y="433" width="165" height="92" rx="8" fill="#f8f4ef" stroke="#d9c6b4"/>
+  <text x="817.5" y="470" class="node">Predicted</text>
+  <text x="817.5" y="498" class="node">tokens</text>
+  <path d="M365 479H430" class="wire"/>
+  <path d="M670 479H735" class="wire"/>
+  <path d="M818 433V378H293V433" class="wire"/>
+  <rect x="410" y="360" width="287" height="31" fill="#fff"/>
+  <text x="553.5" y="382" class="label">12 masked refinement steps</text>
+  <path d="M900 465H945V250" class="wire"/>
+  <text x="972" y="352" class="label" transform="rotate(-90 972 352)">sampled tokens</text>
+  <path d="M702.5 250V302H193V479H220" class="wire training"/>
+  <rect x="367" y="290" width="248" height="24" fill="#fff"/>
+  <text x="491" y="307" class="label">encoded training targets</text>
+
+  <path d="M32 588H1030" stroke="#dce2e9" stroke-width="1.2"/>
+  <text x="52" y="655" class="stage" fill="#247d7e">Stage C</text>
+  <text x="52" y="683" class="stage-sub">Feature diffusion</text>
+  <text x="52" y="717" class="stage-sub">learned weights</text>
+
+  <rect x="220" y="700" width="145" height="90" rx="8" fill="#f2f7f7" stroke="#bfcecf"/>
+  <text x="292.5" y="737" class="node">Gaussian</text>
+  <text x="292.5" y="765" class="node">noise</text>
+  <rect x="430" y="690" width="240" height="110" rx="13" fill="#dcefed" stroke="#4e9592" stroke-width="1.5"/>
+  <text x="550" y="729" class="node">Transformer ×16</text>
+  <text x="550" y="758" class="detail">width 1,152 · DDIM 50</text>
+  <text x="550" y="784" class="detail">rank 10 in the grown run</text>
+  <rect x="735" y="700" width="165" height="90" rx="8" fill="#f2f7f7" stroke="#bfcecf"/>
+  <text x="817.5" y="734" class="node">Image features</text>
+  <text x="817.5" y="764" class="detail">192 × 7 × 7</text>
+  <path d="M365 745H430" class="feature"/>
+  <path d="M670 745H735" class="feature"/>
+  <path d="M818 700V622H550V545" class="feature"/>
+  <rect x="585" y="607" width="205" height="29" fill="#fff"/>
+  <text x="687.5" y="628" class="label">feature conditioning</text>
+
+  <rect x="1060" y="333" width="308" height="520" rx="12" fill="#f8f6fb"/>
+  <text x="1086" y="368" class="tag">SHARED TEXT CONDITIONING</text>
+  <rect x="1090" y="510" width="246" height="100" rx="11" fill="#e9e2f2" stroke="#ac98c3"/>
+  <text x="1213" y="550" class="node">CLIP text encoder</text>
+  <text x="1213" y="579" class="detail">frozen weights</text>
+  <rect x="1090" y="705" width="246" height="77" rx="8" fill="#fff" stroke="#d4ccdf"/>
+  <text x="1213" y="751" class="node">Text prompt</text>
+  <path d="M1213 705V610" class="condition"/>
+  <path d="M1090 560H635V545" class="condition"/>
+  <path d="M996 560V832H550V800" class="condition"/>
+  <circle cx="996" cy="560" r="4.5" fill="#78629a"/>
+  <rect x="746" y="545" width="182" height="29" fill="#fff"/>
+  <text x="837" y="565" class="label">text embeddings</text>
+  <rect x="704" y="817" width="220" height="29" fill="#fff"/>
+  <text x="814" y="838" class="label">text embeddings</text>
+
+  <path d="M48 875H1352" stroke="#dce2e9" stroke-width="1.2"/>
+  <text x="48" y="903" class="sub" style="font-size:16px">Solid arrows: text-to-image generation. Dashed arrows: encoded training targets. Frozen components are shared across runs.</text>
+  <text x="48" y="926" class="sub" style="font-size:15px">Redrawn from the architecture figure in my LaTeX source. The original artwork and its historical annotations are preserved alongside this figure.</text>
+</svg>

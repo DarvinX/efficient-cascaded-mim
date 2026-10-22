@@ -126,7 +126,7 @@ def resource_plot(rows):
     for ax in axes.flat:
         ax.grid(axis="y", alpha=.25, zorder=0)
     finish(fig, "02_resources", "Model and compute resources: dense versus grown",
-           "Grown whole-training memory peaks were not retained after the user-ended phases (N/A). Panel(d) shows unequal budgets, not wall time or a speedup. Shared frozen assets excluded in(a).",
+           "Complete grown training-memory peaks are unavailable (N/A). Panel(d) shows unequal budgets, not wall time or a speedup. Shared frozen assets excluded in(a).",
            bottom=.14, top=.77)
 
 

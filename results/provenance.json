@@ -323,11 +323,15 @@
     },
     "figures/02_resources.png": {
       "original_path": "report/dense-vs-grown-v2/02_resources.png",
-      "sha256": "9f429e87475a230ef44739538a2b6d840802e1c6f07a58631d45735cc0b0a20b"
+      "sha256": "9f429e87475a230ef44739538a2b6d840802e1c6f07a58631d45735cc0b0a20b",
+      "packaged_sha256": "26cb18d1daeafc9ee37b24749c8597ae8c8c1fd4ea363625f7a921a8e6bcfc08",
+      "change": "Regenerated from identical recorded data; neutral resource caption removes conversational phase-stop wording."
     },
     "figures/02_resources.svg": {
       "original_path": "report/dense-vs-grown-v2/02_resources.svg",
-      "sha256": "8a6891ec66eb727d09c0cb4d2de8898600a28890a9468eeafbc0e57ef3574757"
+      "sha256": "8a6891ec66eb727d09c0cb4d2de8898600a28890a9468eeafbc0e57ef3574757",
+      "packaged_sha256": "888a1c48029342253a3708c9ae2e6a7988203a33e4ae80447eb860d4d3ba9f10",
+      "change": "Regenerated from identical recorded data; neutral resource caption removes conversational phase-stop wording."
     },
     "figures/03_sample_comparison.png": {
       "original_path": "report/dense-vs-grown-v2/03_sample_comparison.png",
@@ -354,6 +358,6 @@
       "sha256": "f43eac9d9cb91e5e7a7cf4166c5d3c34a2f4674075a13f5f8060a732bc595a0b"
     }
   },
-  "scope": "Curated MTP source/evidence release; measured core modules byte-identical. Only asset revision pinning and analysis path layout are packaging changes. Original data, checkpoints, raw images and source archive preserved locally. Figure inputs filter the report to dense17 and grown17 only.",
+  "scope": "Curated MTP source/evidence release; measured core modules byte-identical. Packaging changes cover the recorded CLIP revision pin, analysis path layout, neutral figure captions, first-person documentation and a thesis-derived architecture redraw. Original data, checkpoints, raw images and thesis source remain preserved locally. Figure inputs filter the report to dense17 and grown17 only.",
   "source_preservation_verified_unix": 1792694180.8965974
 }

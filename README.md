@@ -4,9 +4,9 @@
 
 ![Project overview](assets/overview.svg)
 
-This repository accompanies Tamal Hansda's MTP, **Efficient Text to Image Generation using Cascaded Masked Image Modeling**. It provides a reconstructed implementation of the thesis pipeline and a local-GPU extension that evaluates the parameter and memory trade-offs of adaptive low-rank training. The original training implementation was unavailable; reconstruction decisions and later measurements are identified explicitly.
+This repository accompanies my MTP, **Efficient Text to Image Generation using Cascaded Masked Image Modeling**. I reconstructed the pipeline from my thesis sources and diagrams, then extended it on a local GPU to study the parameter and memory trade-offs of adaptive low-rank training. My original training implementation was unavailable, so I distinguish the reconstruction decisions and additional measurements from the work reported in my thesis.
 
-The resource-efficient generator uses **33.31M learned parameters**, compared with **368.92M** for the dense control, and records **1.63 GiB peak generation allocation**, compared with **4.30 GiB**. Image quality remains a trade-off: dense achieves lower FID and KID. These are measurements from the same 2,048 validation prompts and training seed 17, with different training budgets.
+My low-rank generator uses **33.31M learned parameters**, compared with **368.92M** for the dense control, and records **1.63 GiB peak generation allocation**, compared with **4.30 GiB**. Image quality remains a trade-off: dense achieves lower FID and KID. I compare both models on the same 2,048 validation prompts and training seed 17, with different training budgets.
 
 [Training protocol](docs/TRAINING.md) · [Evaluation details](docs/EVALUATION.md) · [Reproduction](docs/REPRODUCIBILITY.md) · [Machine-readable results](results/comparison.json)
 
@@ -21,29 +21,29 @@ The resource-efficient generator uses **33.31M learned parameters**, compared wi
 | KID ↓ | **0.06986** | 0.10745 |
 | CLIP cosine ↑ | **0.34476** | 0.34264 |
 
-The grown generator has **90.97% fewer learned parameters** and **62.08% lower measured generation allocation**. Learned parameter counts include selected fine-tuned B and C, with their dense boundary layers; shared frozen VQ/text components are excluded. GPU allocation measurements cover the complete native generation process, including the frozen components. They are PyTorch allocator measurements rather than total device memory.
+I measured **90.97% fewer learned parameters** and **62.08% lower generation allocation** for the grown generator. I count selected fine-tuned B and C, including their dense boundary layers, as learned generator parameters; shared frozen VQ/text components are excluded. GPU allocation measurements cover the complete native generation process, including the frozen components. They are PyTorch allocator measurements rather than total device memory.
 
 ![Resources](figures/02_resources.png)
 
-The grown run trained for more updates. Its whole-training peak memory was not retained after the requested phase stops and is reported as unavailable. These results establish a parameter/memory/quality trade-off, without a matched-budget training-speed claim.
+I trained the grown run for more updates. I report its whole-training peak memory as unavailable because a complete peak spanning those phases was not retained. I use these results to describe a parameter/memory/quality trade-off; I do not claim a matched-budget training speedup.
 
 ## Quality versus parameter count
 
 ![Quality versus parameters](figures/01_metrics_vs_parameters.png)
 
-The comparison uses one dense and one grown seed-17 cascade. All metrics use the same 2,048 held-out validation rows, RGB256 preprocessing, 50 DDIM steps, 12 masked refinement steps and guidance 1. The reserved test split is unscored. The thesis's reported FID uses an unspecified protocol and is not treated as numerically equivalent.
+I compare one dense and one grown seed-17 cascade. All metrics use the same 2,048 held-out validation rows, RGB256 preprocessing, 50 DDIM steps, 12 masked refinement steps and guidance 1. I keep the reserved test split unscored. The FID protocol in my thesis was not specified fully, so I do not treat its reported value as numerically equivalent to this evaluation.
 
 ## Qualitative results
 
 ![Reference, dense and grown samples](figures/03_sample_comparison.png)
 
-The grid shows the first eight validation prompts in their original order, with no favorable sample selection. Captions and references match between arms; native final sampling noise is not paired. These images are separate from the fixed-seed training progression below.
+I show the first eight validation prompts in their original order, without selecting favorable samples. Captions and references match between arms; native final sampling noise is not paired. These images are separate from the fixed-seed training progression below.
 
 ## Training progression
 
 ![Fine-tuning progression](animations/finetuning.gif)
 
-The same eight prompts and noise seeds are retained across training. This compact preview spans fine-tuning steps 0–91,000; metrics use the selected checkpoint at 89,500. Original PNG masters and full recovery states remain preserved in the local research archive.
+I retain the same eight prompts and noise seeds across training. This compact preview spans fine-tuning steps 0–91,000; metrics use the selected checkpoint at 89,500. I preserve the original PNG masters and full recovery states in my local research archive.
 
 <details>
 <summary>Joint B and feature-diffusion C progression</summary>
@@ -52,7 +52,7 @@ The same eight prompts and noise seeds are retained across training. This compac
 |---|---|
 | ![Joint B progression](animations/stage-previews/b.gif) | ![C progression](animations/stage-previews/c.gif) |
 
-Each preview shows 32 uniform native keyframes with the original eight prompts and feature/token seeds. Last displayed steps are 387,000 for B and 229,000 for C; optimizer shutdown steps are documented separately. Playback is illustrative, with no image interpolation or new model inference.
+I use 32 uniformly spaced native keyframes for each preview, preserving the original eight prompts and feature/token seeds. Last displayed steps are 387,000 for B and 229,000 for C; I document optimizer shutdown steps separately. Playback is illustrative, with no image interpolation or new model inference.
 
 </details>
 
@@ -61,19 +61,23 @@ Each preview shows 32 uniform native keyframes with the original eight prompts a
 
 ![Learning and rank history](figures/learning-and-rank.png)
 
-Joint B grew naturally from rank 2 to 8; C grew from 2 to 10. Fine-tuning kept B's rank 8 fixed under the later experimental instruction. Each phase was ended explicitly before a terminal plateau, so the run is not described as fully converged.
+I let joint B grow naturally from rank 2 to 8 and C from 2 to 10, then kept B's rank 8 fixed during fine-tuning. I ended each phase before a verified terminal plateau, so I do not describe the run as fully converged.
 
 </details>
 
 ## Method
 
-A frozen VQ model maps images to discrete tokens. Joint Stage B learns image features and masked image tokens; Stage C learns text-conditioned diffusion over the image-feature grid. B is then fine-tuned against generated C features. Text-only inference follows **caption → feature diffusion C → masked-token B → VQ decoder → image**. See the [full training account](docs/TRAINING.md) for architecture, data splits, losses, optimization, rank growth, checkpointing and exact observed stage boundaries.
+![Architecture from my MTP](assets/architecture.svg)
 
-The low-rank extension draws on **GILoRaT**, related work coauthored by Tamal Hansda: [preprint](https://doi.org/10.13140/RG.2.2.19338.17608), [code](https://github.com/DarvinX/GILoRaT). Its validation-driven factorization is adapted here to the generative stages; this extension is evaluated separately from the original classification experiments.
+I redrew the architecture from my LaTeX source for clearer typography and arrow routing. The dimensions and rank labels describe this reconstruction. I preserve the [original thesis diagram](assets/thesis/architecture-original.png), including its historical annotations, and explain the changes in [architecture notes](docs/ARCHITECTURE.md).
+
+I use a frozen VQ model to map images to discrete tokens. Joint Stage B learns image features and masked image tokens; Stage C learns text-conditioned diffusion over the image-feature grid. I then fine-tune B against generated C features. Text-only inference follows **caption → feature diffusion C → masked-token B → VQ decoder → image**. I document the architecture, data splits, losses, optimization, rank growth, checkpointing and exact observed stage boundaries in the [full training account](docs/TRAINING.md).
+
+My low-rank extension draws on **GILoRaT**, related work I coauthored: [preprint](https://doi.org/10.13140/RG.2.2.19338.17608), [code](https://github.com/DarvinX/GILoRaT). I adapt its validation-driven factorization to the generative stages and evaluate this extension separately from the original classification experiments.
 
 ## Additional evaluation
 
-Beyond the thesis reporting, this release retains FID/KID and independent CLIP embeddings and adds PRDC precision/recall/density/coverage, caption retrieval at 1/5/10, alignment against shuffled captions, parameter accounting and scoped GPU-memory measurements. [Evaluation details](docs/EVALUATION.md) explain the protocols and limitations. CPU-only numerical replay uses the saved validation features; it does not require training or test evaluation.
+Beyond the results in my thesis, I retain FID/KID and independent CLIP embeddings and add PRDC precision/recall/density/coverage, caption retrieval at 1/5/10, alignment against shuffled captions, parameter accounting and scoped GPU-memory measurements. I explain the protocols and limitations in [evaluation details](docs/EVALUATION.md). CPU-only numerical replay uses the saved validation features; it does not require training or test evaluation.
 
 ## Repository structure
 
@@ -88,4 +92,4 @@ evidence/       native summaries, journals, vectors and samples
 docs/           training, evaluation and reproduction account
 ```
 
-Large datasets, pretrained weights and optimizer checkpoints are kept outside Git. Pinned public asset revisions and selected checkpoint SHA256 values are documented; the local source archive retains all original images and resumable states. Nothing in this repository automatically launches training or installs the recovery service.
+I keep large datasets, pretrained weights and optimizer checkpoints outside Git. I document pinned public asset revisions and selected checkpoint SHA256 values, while preserving all original images and resumable states in my local source archive. Nothing in this repository automatically launches training or installs the recovery service.
